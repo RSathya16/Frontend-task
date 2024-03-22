@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parking bay</title>
+    
+</head>
+<body>
+    <style>
+        .flex-container{
+            width:100%;
+            height: auto;
+            display: flex;
+            
+        }
+        .flex-box{
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 200px;
+            margin-top: 60px;
+            margin-left: 10px;
+            flex-wrap: wrap;
+
+
+        }
+    </style>
+    <input type="text" id="vechileno" >
+    <button id="parkbtn" onclick="park()">Park</button>
+    <button id="parkbtn" onclick="removecar()">removecar</button>
+    <section id="parkingbays">
+        <div class="flex-container">
+            <div class="flex-box" id="p1">
+                Parking 1
+            </div>
+            <div class="flex-box" id="p2">
+                Parking 2
+            </div>
+            <div class="flex-box" id="p3">
+                Parking 3
+            </div>
+            <div class="flex-box" id="p4">
+                Parking 4
+            </div>
+            <div class="flex-box" id="p5">
+                Parking 5
+            </div>
+            <div class="flex-box" id="p6">
+                Parking 6
+            </div>
+            <div class="flex-box" id="p7">
+                Parking 7
+            </div>
+            <div class="flex-box" id="p8">
+                Parking 8
+            </div>
+            <div class="flex-box" id="p9">
+                Parking 9
+            </div>
+            <div class="flex-box" id="p10">
+                Parking 10
+            </div>
+        </div>
+    </section>
+    <p id="res"></p>
+    <p id="res1"></p>
+    <script>
+        var parkdb=[[1," "],[2," "],[3," "],[4," "],[5," "],[6," "],[7," "],[8," "],[9," "],[10," "]];
+        var parkingbay=[p1,p2,p3,p4,p5,p6,p7,p8,p9,p10];
+
+        function park(){
+            let vechileno=document.getElementById('vechileno').value;
+            for(let i=0;i<=parkdb.length;i++){
+                if(i==10){
+                 console.log("parking is full");
+                 document.getElementById('res').innerHTML="parking is full";
+                 break;
+                }
+                else if(parkdb[i][1] == " "){
+                    parkdb[i][1] = vechileno;
+                    let prk=parkingbay[i];
+                    prk.style.backgroundColor="green";
+                    break;
+                }
+}
+        console.log(parkdb);   
+        
+    }
+    function removecar(){
+        let vechileno=document.getElementById('vechileno').value;
+        console.log(vechileno);
+        // let num=1;
+        for(let i=0;i<=parkdb.length;i++){
+            if(parkdb[i][1] == vechileno){
+                    parkdb[i][1] = " ";
+                    let prk=parkingbay[i];
+                    prk.style.backgroundColor="blue";
+                    break;
+            }
+            else{
+                document.getElementById('res1').innerHTML="vechile no not found";            
+            }
+        
+       }
+       console.log(parkdb);
+       displayvechile();
+       
+
+    }
+    function displayvechile(){
+        document.getElementById('p1').innerHTML=parkdb[0][1];
+        document.getElementById('p2').innerHTML=parkdb[1][1];
+        document.getElementById('p3').innerHTML=parkdb[2][1];
+        document.getElementById('p4').innerHTML=parkdb[3][1];
+        document.getElementById('p5').innerHTML=parkdb[4][1];
+        document.getElementById('p6').innerHTML=parkdb[5][1];
+        document.getElementById('p7').innerHTML=parkdb[6][1];
+        document.getElementById('p8').innerHTML=parkdb[7][1];
+        document.getElementById('p9').innerHTML=parkdb[8][1];
+        document.getElementById('p10').innerHTML=parkdb[9][1];
+    }
+    // removecar("TN01");
+    
+    </script>
+</body>
+</html>

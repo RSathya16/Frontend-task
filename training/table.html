@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+   </head>
+<body>
+    Multiplication Table of:<input type="text" id="num" onkeyup="table()">
+    <p id="table"></p>
+    <script>
+        function table(){
+            
+            let number=Number(document.getElementById('num').value);
+            let result="";
+            for(let num=1;num<=10;num++){
+                
+             result=result + num+" * "+ number +" = " + number*num +"<br>";
+                document.getElementById('table').innerHTML= result;
+        }
+        
+            }
+           
+    </script>
+</body>
+</html>

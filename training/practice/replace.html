@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace</title>
+</head>
+<body>
+    <p id="res"></p>
+    <script>
+        function replace(word,replacingword,replaceword){
+            let orgwrd="";
+            for(let index=0;index<word.length;index++){
+                orgwrd += word[index] === replacingword? replaceword : word[index];
+                // if(word[index]==replacingword){
+                //      orgwrd=(word[index]=replaceword);
+                //     word+=orgwrd;
+                //     console.log(word);
+            }
+                console.log(orgwrd);
+            }
+            
+        
+        replace("sathya",'y','h');
+    </script>
+</body>
+</html>

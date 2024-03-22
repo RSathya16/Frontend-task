@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade System</title>
+</head>
+<body>
+    <h2>Grade System</h2>
+    Mark:<input type="text" name="mark" id="mark">
+    
+    <button type="button" id="findGrade" onclick="find()">findGrade</button><br>
+    Grade:<input type="text" name="grade" id="grade">
+    <script>
+        function find(){
+            let mark=Number(document.getElementById('mark').value);
+            
+            let grade="";
+            
+            if(mark>90){
+                grade="A";
+            }
+            else if(mark>80){
+                grade="B";
+            }
+            else if(mark>70){
+                grade="C";
+            }
+            else if(mark>60){
+                grade="D";
+            }
+            else if(mark>50){
+                grade="E";
+            }
+            else{
+                grade="F";
+            }
+            document.getElementById('grade').value=grade;
+        }
+    </script>
+
+
+<h2>Greatest of Three Numbers</h2>
+
+    A:<input type="text" name="A" id="A">
+    B:<input type="text" name="B" id="B">
+    C:<input type="text" name="C" id="C"><br>
+    <button type="button" id="find" onclick="findGreatest()">Greatest Numbers</button><br>
+    <br>
+    Result:<input type="text" name="resultValue" id="resultValue">
+    <script>
+        function findGreatest(){
+            let num1=Number(document.getElementById('A').value);
+            let num2=Number(document.getElementById('B').value);
+            let num3=Number(document.getElementById('C').value);
+            let find=document.getElementById('find').value;
+            let resultValue="";
+            if(num1>num2 && num1>num3){
+                resultValue=num1;
+            }
+            else if(num2>num1 && num2>num3){
+                resultValue=num2;
+            }
+            else{
+                resultValue=num3;
+            }
+            document.getElementById('resultValue').value=resultValue;
+        }
+    </script>
+
+<h2>Number is Positive or Negative</h2>
+    Number:<input type="text" name="number" id="number">
+    Result:<input type="text" name="result" id="result" onclick="Result()">
+    <script>
+        function Result(){
+            let number=document.getElementById('number').value;
+            let result="";
+            if(number>=0){
+                result="Postive Number";
+            }  
+            else{
+                result="Negative Number";
+            }
+            document.getElementById('result').value=result;
+        }
+    </script>
+
+
+<h2>Days in a Month</h2>
+    Month:<select id="month" name="month" onchange="daysinmonth()">
+        <option>Jan</option>
+        <option>Feb</option>
+        <option>Mar</option>
+        <option>Apr</option>
+        <option>May</option>
+        <option>Jun</option>
+        <option>Jul</option>
+        <option>Aug</option>
+        <option>Sep</option>
+        <option>Oct</option>
+        <option>Nov</option>
+        <option>Dec</option>
+    </select><br>
+    Days:<input type="text" id="days" name="days">
+    <script>
+        function daysinmonth(){
+            let month=document.getElementById('month').value;
+            let days="";
+            if(month=="Jan" || month=="Mar" || month=="May" || month=="Jul" || month=="Sep" || month=="Nov" ){
+                days="31";
+            }
+            else if(month=="Apr" || month=="Jun" || month=="Aug" || month=="Oct" || month=="Dec"){
+                days="30";
+            }
+            else{
+                days="28";
+            }
+            document.getElementById('days').value=days;
+        }
+    </script>
+
+    <h2>Year is Leap Year or Not</h2>
+    Year:<input type="text" name="year" id="year">
+    <button type="button" id="findYear" onclick="LeaporNot()">Leap or Non leap Year</button>
+    <br>
+    Find:<input type="text" name="findYr" id="findYr">
+    <script>
+        function LeaporNot(){
+            let year=Number(document.getElementById('year').value);
+            let findYr=document.getElementById('findYear').value;
+            let resultYr="";
+            if(( year%400==0 || year%100!=0 && year%4==0)){
+                resultYr="LeapYear";
+            }
+            
+            else{
+                resultYr="Non Leap Year";
+            }
+            document.getElementById('findYr').value=resultYr;
+        }
+    </script>
+
+    <h2>Create a Square or Not</h2>
+    Length:<input type="text" id="length">
+    Breath:<input type="text" id="breath" onkeyup="findsquare()">
+    
+    <p id="resultsquare"></p>
+    <script>
+        function findsquare(){
+            let length=document.getElementById('length').value;
+            let breath=document.getElementById('breath').value;
+            let square="";
+            if(length===breath){
+                square="It form a square";
+            }
+            else{
+                square="It doesn't form a square";
+            }
+            document.getElementById('resultsquare').innerHTML=square;
+        }
+    </script>
+
+    <h2>Bill Amount</h2>
+    Bill:<input type="text" id="bill" onkeyup="finalBill()">
+    Discount:<input type="text" id="discount" >
+    <button onclick="findBill()">Bill</button>
+    findbill:<input type="text" id="findbill" >
+    <script>
+        function finalBill(){
+        let bill=document.getElementById('bill').value;
+        
+            let discount="";
+        if(bill>1000){
+            discount=(bill*10)/100;
+        }
+        else{
+            discount=bill*0;
+        }
+        document.getElementById('discount').value=discount;
+        
+    }
+    function findBill(){
+        let bill=Number(document.getElementById('bill').value);
+        let discount=Number(document.getElementById('discount').value);
+        let findbillamt="";
+        findbillamt=bill-discount;
+        document.getElementById('findbill').value=findbillamt;
+    }
+    
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padend</title>
+</head>
+<body>
+    <p id="res"></p>
+    <p id="res1"></p>
+    <script>
+        function padend(str,howmany,char){
+            let strlen=0;
+            strlen=howmany-str.length;
+            console.log(strlen);
+            for(let i=0;i<strlen;i++){
+                str=char+str;
+            }
+            console.log(str);
+            document.getElementById('res').innerHTML=str;
+            document.getElementById('res1').innerHTML=strlen;
+        }
+        padend("sathya",10,'$');
+        </script>
+</body>
+</html>

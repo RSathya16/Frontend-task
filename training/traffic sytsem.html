@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic System</title>
+</head>
+<body>
+    <h1>Traffic System</h1>
+    <div class="tambaramroad">
+    <button type="button" id="tambaram" onclick="tamroute()">Tambaram</button>
+    <input type="text" id="tamlef">
+    <input type="text" id="tamrig">
+    </div>
+    <div class="chrompetroad">
+    <button type="button" id="chrompet"onclick="chroroute()">Chrompet</button>
+    <input type="text" id="chrolef">
+    <input type="text" id="chrorig">
+    </div>
+    <div class="perugalathurroad">
+    <button type="button" id="perugalathur" onclick="peruroute()">Perugalathur</button>
+    <input type="text" id="perulef">
+    <input type="text" id="perurig">
+    </div>
+    <div class="tnagarroad">
+    <button type="button" id="tnagar" onclick="tnaroute()">TNagar</button>
+    <input type="text" id="tnalef">
+    <input type="text" id="tnarig">
+    </div>
+    <style>
+        h1{
+            left: 320px;
+            position: absolute;
+        }
+        input{
+            width:20px;
+            height: 100px;
+        }
+        #tambaram {
+            top:100px;
+            left:370px;
+            position: absolute;
+        }
+        #tamlef{
+            left:380px;
+            top:130px;
+            position: absolute;
+        }
+        #tamrig{
+            left:408px;
+            top:130px;
+            position: absolute;
+        }
+        #chrompet {
+            top:400px;
+            left:370px;
+            position: absolute;
+        }
+        #chrolef{
+            left:380px;
+            top:290px;
+            position: absolute;
+        }
+        #chrorig{
+            left:408px;
+            top:290px;
+            position: absolute;
+        }
+        #perugalathur {
+            top:253px;
+            left:173px;
+            position: absolute;
+        }
+        #perulef{
+            left:272px;
+            top:238px;
+            width: 100px;
+            height: 20px;
+            position: absolute;
+        }
+        #perurig{
+            left:272px;
+            top:265px;
+            width: 100px;
+            height: 20px;
+            position: absolute;
+        }
+        #tnagar {
+            top:253px;
+            left:550px;
+            position: absolute;
+        }
+        #tnalef{
+            left:435px;
+            top:238px;
+            width: 100px;
+            height: 20px;
+            position: absolute;
+        }
+        #tnarig{
+            left:435px;
+            top:265px;
+            width: 100px;
+            height: 20px;
+            position: absolute;
+        }
+    </style>
+    <script>
+        
+        function chroroute(){
+            document.getElementById('chrolef').style.backgroundColor="green";
+            document.getElementById('perurig').style.backgroundColor="green";
+            document.getElementById('tamlef').style.backgroundColor="green";
+            document.getElementById('tnalef').style.backgroundColor="green";
+            document.getElementById('chrorig').style.backgroundColor="green";
+            document.getElementById('tamrig').style.backgroundColor="red";
+            document.getElementById('tnarig').style.backgroundColor="red";
+            document.getElementById('perulef').style.backgroundColor="red";
+        }
+        function tamroute(){
+            document.getElementById('tamrig').style.backgroundColor="green";
+            document.getElementById('tnalef').style.backgroundColor="green";
+            document.getElementById('chrorig').style.backgroundColor="green";
+            document.getElementById('perurig').style.backgroundColor="green";
+            document.getElementById('tamlef').style.backgroundColor="green";
+            document.getElementById('chrolef').style.backgroundColor="transparent";
+            document.getElementById('tnarig').style.backgroundColor="transparent";
+            document.getElementById('perulef').style.backgroundColor="transparent";
+        }
+        function peruroute(){
+            document.getElementById('perulef').style.backgroundColor="green";
+            document.getElementById('tamlef').style.backgroundColor="green";
+            document.getElementById('tnalef').style.backgroundColor="green";
+            document.getElementById('chrorig').style.backgroundColor="green";
+            document.getElementById('perurig').style.backgroundColor="green";
+            document.getElementById('tamrig').style.backgroundColor="transparent";
+            document.getElementById('tnarig').style.backgroundColor="transparent";
+            document.getElementById('chrolef').style.backgroundColor="transparent";
+        }
+        function tnaroute(){
+            document.getElementById('tnalef').style.backgroundColor="green";
+            document.getElementById('chrorig').style.backgroundColor="green";
+            document.getElementById('tamlef').style.backgroundColor="green";
+            document.getElementById('perurig').style.backgroundColor="green";
+            document.getElementById('tnarig').style.backgroundColor="green";
+            document.getElementById('tamrig').style.backgroundColor="transparent";
+            document.getElementById('perulef').style.backgroundColor="transparent";
+            document.getElementById('chrolef').style.backgroundColor="transparent";
+        }
+    </script>
+</body>
+</html>

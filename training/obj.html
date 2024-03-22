@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    Fan:<button type="text" id="fan" onclick="fan()">Fan</button>
+    Light:<button type="text" id="light" onclick="light()">Light</button>
+    Door:<button type="text" id="door" onclick="door()">Door</button>
+    TV:<button type="text" id="tv" onclick="tv()">TV</button>
+    <p id="ans"></p>
+    <script>
+        function fan(){
+            Ans="";
+            ans="fan on";
+            document.getElementById('ans').innerHTML=ans;
+        }
+        function light(){
+            Ans="";
+            ans="light on";
+            document.getElementById('ans').innerHTML=ans;
+        }
+        function door(){
+            Ans="";
+            ans="door opens";
+            document.getElementById('ans').innerHTML=ans;
+        }
+        function tv(){
+            Ans="";
+            ans="tv on";
+            document.getElementById('ans').innerHTML=ans;
+        }
+    </script>
+    
+</body>
+</html>

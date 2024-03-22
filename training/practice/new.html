@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>script</title>
+</head>
+<body>
+    <p id="res"></p>
+    <p id="res1"></p>
+    <input type="text" id="orgword" >
+    <input type="text" id="checword" onkeyup="startswith()">
+    <script>
+        function startswith(){
+            let orgword=document.getElementById('orgword').value;
+            let checword=document.getElementById('checword').value;
+            let orglength=orgword.length;
+            let str="";
+            let result="";
+            let checlength=checword.length;
+            
+            for(let i=0;i<checlength;i++){
+                 str=str+orgword[i];
+                 if(str==checword){
+                     result="true";
+                 }
+                 else{
+                     result="false";
+                 }
+                document.getElementById('res').innerHTML=result;
+            }
+           
+            
+
+
+
+
+        }
+        </script>
+    
+</body>
+</html>

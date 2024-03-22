@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>endswith</title>
+</head>
+<body>
+    <p id="res"></p>
+    <input type="text" id="orgword">
+    <input type="text" id="checword" onkeyup="endswith()">
+    <script>
+        function endswith(){
+            let orgword=document.getElementById('orgword').value;
+            let checword=document.getElementById('checword').value;
+            let orglength=orgword.length;
+            let checlength=checword.length;
+            let str="";
+            let stri="";
+            for(let i=orglength-1;i>checlength;i--){
+                str=orgword[i]+str;
+                if(str==checword){
+                    stri="true";
+                }
+                else{
+                    stri="false";
+                }
+                document.getElementById('res').innerHTML=stri;
+            }
+
+        }
+    </script>
+
+</body>
+</html>

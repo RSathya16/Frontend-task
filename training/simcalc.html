@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculation</title>
+</head>
+<body>
+    A:<input type="text" name="A" id="A">
+    B:<input type="text" name="B" id="B">
+    <br>
+    result:<input type="text" name="result" id="result"><br>
+    <button type="button" onclick="add()">ADD</button><br>
+    <button type="button" onclick="sub()">SUB</button><br>
+    <button type="button" onclick="mul()">MUL</button><br>
+    <button type="button" onclick="div()">DIV</button>
+    <script>
+        function add(){
+            let num1=Number(document.getElementById('A').value);
+            let num2=Number(document.getElementById('B').value);
+            let calcresult="";
+            calcresult=num1+num2;
+            document.getElementById('result').value=calcresult;
+        }
+        function sub(){
+            let num1=Number(document.getElementById('A').value);
+            let num2=Number(document.getElementById('B').value);
+            let calcresult="";
+            calcresult=num1-num2;
+            document.getElementById('result').value=calcresult;
+        }6
+        function mul(){
+            let num1=Number(document.getElementById('A').value);
+            let num2=Number(document.getElementById('B').value);
+            let calcresult="";
+            calcresult=num1*num2;
+            document.getElementById('result').value=calcresult;
+        }
+        function div(){
+            let num1=Number(document.getElementById('A').value);
+            let num2=Number(document.getElementById('B').value);
+            let calcresult="";
+            calcresult=num1/num2;
+            document.getElementById('result').value=calcresult;
+        }
+    </script>
+</body>
+</html>
